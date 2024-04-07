@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DAddRemoveButtons</class>
+ <widget class="QWidget" name="DAddRemoveButtons">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>430</width>
+    <height>41</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>DAddRemoveButtons</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>2</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QPushButton" name="Add_pushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#Add_pushButton{
+padding: 0px 0 0px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/add_green_18px.png);
+background-position: center ;
+padding-bottom:0;
+
+}
+#Add_pushButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#Add_pushButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/add_green_18px.png);
+background-position: center;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="Remove_pushButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">#Remove_pushButton{
+padding: 0px 0 0px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/forbidden_16px.png);
+background-position: center ;
+padding-bottom:0;
+
+}
+#Remove_pushButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#Remove_pushButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/forbidden_16px.png);
+background-position: center;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="InputButton_horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>383</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

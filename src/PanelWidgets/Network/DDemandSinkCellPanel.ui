@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DDemandSinkCellPanel</class>
+ <widget class="QWidget" name="DDemandSinkCellPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>353</width>
+    <height>948</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DDemandSinkCellPanel</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="Property_groupBox">
+     <property name="title">
+      <string>Demand/ Sink Cell Property</string>
+     </property>
+     <layout class="QVBoxLayout" name="Property_verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="Property_gridLayout">
+        <item row="4" column="1">
+         <widget class="QDoubleSpinBox" name="FlowCap_doubleSpinBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+          <property name="buttonSymbols">
+           <enum>QAbstractSpinBox::NoButtons</enum>
+          </property>
+          <property name="suffix">
+           <string/>
+          </property>
+          <property name="decimals">
+           <number>2</number>
+          </property>
+          <property name="minimum">
+           <double>0.000000000000000</double>
+          </property>
+          <property name="maximum">
+           <double>1000.000000000000000</double>
+          </property>
+          <property name="singleStep">
+           <double>0.010000000000000</double>
+          </property>
+          <property name="value">
+           <double>0.000000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QComboBox" name="Type_comboBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <item>
+           <property name="text">
+            <string>Demand</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Sink</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="FlowCap_Label">
+          <property name="text">
+           <string>Flow Capacity</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="ID_Label">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="Name_lineEdit"/>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="Name_Label">
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QTextEdit" name="Details_textEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Maximum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="Details_Label">
+          <property name="text">
+           <string>Details</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="Type_Label">
+          <property name="text">
+           <string>Type</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="IDText_Label">
+          <property name="text">
+           <string>ID</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="unitQ_label">
+          <property name="text">
+           <string>pcu/hr</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="DemandInput_groupBox">
+     <property name="title">
+      <string>Demand Input table</string>
+     </property>
+     <layout class="QVBoxLayout" name="DemandInput_verticalLayout">
+      <item>
+       <layout class="QGridLayout" name="DemandInput_gridLayout">
+        <item row="0" column="0">
+         <widget class="QLabel" name="Plan_Label">
+          <property name="text">
+           <string>Plan</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="Plan_comboBox"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QTableWidget" name="DemandInput_tableWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <property name="selectionBehavior">
+         <enum>QAbstractItemView::SelectRows</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>true</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>From t</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>End t</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Rate pcu/hr</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="DivergeRatioInput_groupBox">
+     <property name="title">
+      <string>Diverge Rratio</string>
+     </property>
+     <layout class="QVBoxLayout" name="DivergeRatioInput_verticalLayout">
+      <item>
+       <widget class="QTableWidget" name="DivergeRatioInput_tableWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>To Cell ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Diverge Ratio</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="MergeRatioInput_groupBox">
+     <property name="title">
+      <string>Merge Ratio</string>
+     </property>
+     <layout class="QVBoxLayout" name="MergeRatioInput_verticalLayout">
+      <item>
+       <widget class="QTableWidget" name="MergeRatioInput_tableWidget">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOff</enum>
+        </property>
+        <attribute name="horizontalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderHighlightSections">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderCascadingSectionResizes">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+        <column>
+         <property name="text">
+          <string>From Cell ID</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>Merge Ratio</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>Name_lineEdit</tabstop>
+  <tabstop>Details_textEdit</tabstop>
+  <tabstop>Type_comboBox</tabstop>
+  <tabstop>FlowCap_doubleSpinBox</tabstop>
+  <tabstop>Plan_comboBox</tabstop>
+  <tabstop>DemandInput_tableWidget</tabstop>
+  <tabstop>DivergeRatioInput_tableWidget</tabstop>
+  <tabstop>MergeRatioInput_tableWidget</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

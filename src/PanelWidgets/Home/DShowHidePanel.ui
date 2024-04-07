@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DShowHidePanel</class>
+ <widget class="QWidget" name="DShowHidePanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>250</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DShowHidePanel</string>
+  </property>
+  <layout class="QVBoxLayout" name="DShowHidePanelWidget_verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="ShowHide_groupBox">
+     <property name="title">
+      <string>Hide Graphical Items</string>
+     </property>
+     <layout class="QVBoxLayout" name="ShowHide_groupBox_verticalLayout">
+      <item>
+       <widget class="QCheckBox" name="HideDmdSnkCells_checkBox">
+        <property name="text">
+         <string>Hide All Demand/ Sink Cells</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="HideCells_checkBox">
+        <property name="text">
+         <string>Hide All Cells</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="HideArcs_checkBox">
+        <property name="text">
+         <string>Hide All Arc Items</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="HideJunctions_checkBox">
+        <property name="text">
+         <string>Hide All Junction Nodes</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="HideAll_horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="HideAll_pushButton">
+          <property name="text">
+           <string>Hide All</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="UnhideAll_pushButton">
+          <property name="text">
+           <string>Unhide All</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="HideAll_horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="ShowHide_verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="Cancel_horizontalLayout">
+     <item>
+      <widget class="QLabel" name="Feedback_Label">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Done_Button">
+       <property name="text">
+        <string>Done</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>HideDmdSnkCells_checkBox</tabstop>
+  <tabstop>HideCells_checkBox</tabstop>
+  <tabstop>HideArcs_checkBox</tabstop>
+  <tabstop>HideJunctions_checkBox</tabstop>
+  <tabstop>HideAll_pushButton</tabstop>
+  <tabstop>UnhideAll_pushButton</tabstop>
+  <tabstop>Done_Button</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

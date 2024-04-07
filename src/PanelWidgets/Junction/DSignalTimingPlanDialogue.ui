@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DSignalTimingPlanDialogue</class>
+ <widget class="QDialog" name="DSignalTimingPlanDialogue">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1300</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DSignalTimingPlanDialogue</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayoutOfDialogue">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayoutOfTableAndChart" stretch="0">
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayoutOfTable">
+       <item>
+        <layout class="QGridLayout" name="gridLayoutOfInputs">
+         <item row="1" column="0">
+          <widget class="QComboBox" name="SigsetcomboBox"/>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="SigsetcomboBox_label">
+           <property name="text">
+            <string>Signal Plan ID</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="CycleTime_spinBox">
+           <property name="maximum">
+            <number>2147483647</number>
+           </property>
+           <property name="value">
+            <number>60</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="Offset_label">
+           <property name="text">
+            <string>Offset</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QSpinBox" name="Offset_spinBox">
+           <property name="maximum">
+            <number>2147483647</number>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="CycleTime_label">
+           <property name="text">
+            <string>CycleTime</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="TimingIput_tableWidget">
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Sig Group</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Green Start Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Green End Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string/>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Green2 Start Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Green2 End Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string/>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
