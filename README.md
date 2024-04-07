@@ -9,7 +9,7 @@ It’s desktop GUI source code of a traffic simulation model which includes Cell
 ![Junction_Page](./details/GUI_Junction_Page.png) 
 
 ## Adaptive Traffic Control System Juntions
-![Juntions](./details/GUI_Adaptive_Traffic_Control_System_Juntions.png) 
+![Juntions](./details/GUI_Adaptive_Traffic_Control_System_Juntions.jpg) 
 
 ## General porpose
 This project is a prototype for general traffic scenarios, scale up applications to network-wide junctions by decentralisation algorithms. Its a desktop software platform to an actual traffic signal controller used in Hong Kong for validation.
