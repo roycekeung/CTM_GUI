@@ -1,0 +1,2329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DTabToolBar</class>
+ <widget class="QWidget" name="DTabToolBar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1216</width>
+    <height>192</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>114</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>DTabToolBar</string>
+  </property>
+  <property name="statusTip">
+   <string extracomment="TabToolBar tips"/>
+  </property>
+  <property name="whatsThis">
+   <string extracomment="TabToolBar"/>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QTabWidget" name="DToolbarTabWidget">
+     <property name="styleSheet">
+      <string notr="true">QTabWidget::pane{
+    border: 1px solid black;
+    background: rgb(224, 224, 224, 50%);
+}
+QTabWidget::tab-bar{
+    alignment:left;
+}
+QTabBar::tab{
+	background:#D3D3D3;
+	color:white;
+	min-width:30ex;
+	min-height:8ex;
+    font: bold italic large &quot;Times New Roman&quot;;
+
+}
+QTabBar::tab:hover{
+	background: rgb(222, 222, 222, 80%);
+}
+QTabBar::tab:selected{
+	border-color: rgb(169,169,169);
+	background:rgb(169,169,169);
+	color:green;
+    font: bold italic large &quot;Times New Roman&quot;;
+    font-size: 13px
+}</string>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="Filetab">
+      <property name="toolTip">
+       <string/>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <attribute name="title">
+       <string>File</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="FileTabTextLabel_1">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>NetWork</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_8">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="OpenButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#OpenButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/folder_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#OpenButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#OpenButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/folder_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Open</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="NewButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#NewButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/document_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#NewButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#NewButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/document_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>New</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="SaveButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#SaveButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Save_icon_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#SaveButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#SaveButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Save_icon_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Save</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="FileTabTextLabel_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Signal Plans / Demand</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="SignalPlansButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#SignalPlansButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/signal_light_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#SignalPlansButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#SignalPlansButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/signal_light_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Signal Plans</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="DemandProfileButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#DemandProfileButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/cars_icon_35px.jpg);
+background-position: top;
+padding-bottom:0;
+
+}
+#DemandProfileButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#DemandProfileButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/cars_icon_35px.jpg);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string extracomment="Demand Profile">Demand Profile</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Hometab">
+      <attribute name="title">
+       <string>Home</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_11">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_7">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="FileTabTextLabel_7">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_25">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="SettingsButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#SettingsButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/settings_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#SettingsButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#SettingsButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/settings_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Settings</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_4">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_8">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="HomeTabTextLabel_1">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Navigation</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_26">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="PanButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#PanButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/hand_mouse_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#PanButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#PanButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/hand_mouse_35px.png);
+background-position: top;
+}
+#PanButton:checked{
+background-color:rgb(120, 120, 120,  50%);
+border: 3px inset gray;
+position: absolute;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/hand_mouse_35px.png);
+background-position: top;
+}
+#PanButton:checked:hover{
+background-color:rgb(160, 160, 160,  50%);
+background-repeat:none;
+}</string>
+             </property>
+             <property name="text">
+              <string>Pan</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ZoomButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#ZoomButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/zoom_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#ZoomButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#ZoomButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/zoom_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Zoom</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="SelectButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#SelectButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/finger_cursor_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#SelectButton:hover
+{
+background-color:rgb(30, 190, 220, 10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220, 15%);
+background-repeat:none;
+}
+#SelectButton:pressed
+{
+background:rgb(25, 185, 215, 20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215, 25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/finger_cursor_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Select</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_5">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_9">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="HomeTabTextLabel_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>View</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_27">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="ShowHideButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#ShowHideButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/hide_icon_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#ShowHideButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#ShowHideButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/hide_icon_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Show/Hide</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ListElementsButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#ListElementsButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/checklist2_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#ListElementsButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#ListElementsButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/checklist2_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>List Elements</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="DetailsButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#DetailsButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/document3_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#DetailsButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#DetailsButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/document3_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Details</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ErrorListButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#ErrorListButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Exclamation_mark_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#ErrorListButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#ErrorListButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Exclamation_mark_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Error List</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_6">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_10">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="HomeTabTextLabel_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>BaseMap</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_28">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="OnOffButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#OnOffButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/onoff_icons_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#OnOffButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#OnOffButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/onoff_icons_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>On/Off</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="DownloadOSMapButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#DownloadOSMapButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/download_cloud_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#DownloadOSMapButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#DownloadOSMapButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/download_cloud_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Download from OSM</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="AdjustMapButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#AdjustMapButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Map1_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#AdjustMapButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#AdjustMapButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Map1_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Adjust Map</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_4">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Networktab">
+      <attribute name="title">
+       <string>Network</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_12">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_15">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="NetworkTabTextLabel_1">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Geometry Lock</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_34">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="LockUnlockButton">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#LockUnlockButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Lock_icon_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#LockUnlockButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#LockUnlockButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Lock_icon_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Net Locked</string>
+             </property>
+             <property name="checkable">
+              <bool>true</bool>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="flat">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_7">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="delete_pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Delete Items</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="line_13">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_12">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="NetworkTabTextLabel_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Arc</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_31">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="CreateArcButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#CreateArcButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/pencil_icon2_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#CreateArcButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#CreateArcButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/pencil_icon2_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Create Arc</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="SplitArcButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#SplitArcButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/split2_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#SplitArcButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#SplitArcButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/split2_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Split Arc</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="SplitCellButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#SplitCellButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/split_mark_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#SplitCellButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#SplitCellButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/split_mark_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string extracomment="Demand Profile">Split Cell</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_8">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_13">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="NetworkTabTextLabel_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Junction node</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_32">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="CreateJunctionNodeButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#CreateJunctionNodeButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/interseciton_icon_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#CreateJunctionNodeButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#CreateJunctionNodeButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/interseciton_icon_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Create Junction Node</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_9">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_14">
+         <item alignment="Qt::AlignHCenter">
+          <widget class="QLabel" name="NetworkTabTextLabel_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Cell</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_33">
+           <property name="spacing">
+            <number>6</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="CreateDemandSinkCellButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#CreateDemandSinkCellButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Bus_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#CreateDemandSinkCellButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#CreateDemandSinkCellButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/Bus_35px.png);
+background-position: top;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Create Demand/Sink Cell</string>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="NewConnectorButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#NewConnectorButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/icon_absplit_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#NewConnectorButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#NewConnectorButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/icon_absplit_35px.png);
+background-position: top;
+}
+#NewConnectorButton:checked{
+background-color:rgb(120, 120, 120,  50%);
+border: 3px inset gray;
+position: absolute;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/icon_absplit_35px.png);
+background-position: top;
+}
+#NewConnectorButton:checked:hover{
+background-color:rgb(160, 160, 160,  50%);
+background-repeat:none;
+}</string>
+             </property>
+             <property name="text">
+              <string>New Connector</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="RemoveConnectorButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">#RemoveConnectorButton{
+padding: 30px 0 10px 0;
+background:none;
+border-width: 2px;
+border-style: solid;
+border-radius: 2px;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/trash_flat_35px.png);
+background-position: top;
+padding-bottom:0;
+
+}
+#RemoveConnectorButton:hover
+{
+background-color:rgb(30, 190, 220,  10%);
+border-width: 2px;
+border-style: solid;
+border-color: rgb(29, 190, 220,  15%);
+background-repeat:none;
+}
+#RemoveConnectorButton:pressed
+{
+background:rgb(25, 185, 215,  20%);
+border-width: 2px;
+border-style: solid;
+border-color:rgb(24, 185, 215,  25%);
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/trash_flat_35px.png);
+background-position: top;
+}
+#RemoveConnectorButton:checked{
+background-color:rgb(120, 120, 120,  50%);
+border:3px inset gray;
+position: absolute;
+background-repeat:none;
+font: bold italic large &quot;Times New Roman&quot;;
+text-align: bottom;
+background-image: url(./icons/trash_flat_35px.png);
+background-position: top;
+}
+#RemoveConnectorButton:checked:hover{
+background-color:rgb(160, 160, 160,  50%);
+background-repeat:none;
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Remove Connector</string>
+             </property>
+             <property name="checkable">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeatDelay">
+              <number>300</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_5">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Simulationtab">
+      <attribute name="title">
+       <string>Simulation</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_10">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_6">
+         <item>
+          <widget class="QLabel" name="label_2">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Run</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <item>
+            <widget class="QPushButton" name="runSim_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Simulate Fixed Plan</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="runOpt_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Run Optimisation</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_10">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_11">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Past Runs</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_7">
+           <item>
+            <widget class="QPushButton" name="manageRuns_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Manage Past Runs</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Junctiontab">
+      <attribute name="title">
+       <string>Junction</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLabel" name="JunctionView_Label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Junction View</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="ExitJctView_Button">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Exit Junction Mode</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QLabel" name="ModifyJct_Label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Modify Junction</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QPushButton" name="NewJctLink_Button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>New Junction Link</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="DeleteJctLink_Button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Delete Junction Link</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="ListJctLink_Button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>List Junction Links</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Configure Junction</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_5">
+           <item>
+            <widget class="QPushButton" name="conflictMatrix_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Conflict Matrix</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="SignalGroups_Button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Signal Groups</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="SignalTimingPlan_Button">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Signal Timing</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>500</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Playbacktab">
+      <attribute name="title">
+       <string>Playback</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_15">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_16">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Playback View</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_13">
+           <item>
+            <widget class="QPushButton" name="exitPlayback_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Exit Playback</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_11">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_17">
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Panels</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
+           <item>
+            <widget class="QPushButton" name="playbackOptions_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Display Options</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="playbackTimeBar_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Time Bar</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_12">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_18">
+         <item>
+          <widget class="QLabel" name="playbackUtilsText_label">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Analytics Utils</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_16">
+           <item>
+            <widget class="QPushButton" name="genDelayPlot_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Generate
+Delay Plot</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="genQueuePlot_pushButton">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>Generate
+Queue
+Length Plot</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_6">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
